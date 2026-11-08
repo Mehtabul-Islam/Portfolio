@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md Mehtabul Islam | CSE Student & Aspiring Software Engineer</title>
+  <meta name="description" content="Portfolio of Md Mehtabul Islam (Mehtab) — Computer Science & Engineering student at BRAC University, aspiring software engineer and AI/ML enthusiast." />
+  <meta name="author" content="Md Mehtabul Islam" />
+  <meta name="theme-color" content="#a7d3b5" />
+
+  <!-- Social share preview (EDIT: replace og-image.jpg with your own 1200x630 image) -->
+  <meta property="og:title" content="Md Mehtabul Islam | Portfolio" />
+  <meta property="og:description" content="CSE student at BRAC University · Aspiring Software Engineer · AI/ML Enthusiast" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Fonts: Poppins for headings, Lato for body (same feel as the CV) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Apply saved theme before paint (avoids a flash) -->
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- ============ ICON SPRITE (reused below with <use href="#i-...">) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 1 8 7 8-7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-5-5m5 5-5 5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m0 0-6 6m6-6 6 6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m8 8-4 4 4 4m8-8 4 4-4 4M14 5l-4 14"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1Zm6 0a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.3-1.3a4 4 0 0 0-5-5L14 6Zm-5 8.4L4 20"/></symbol>
+    <symbol id="i-medal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 3h8l-2 6h-4L8 3Zm4 6a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 3 1 2h2l-1.5 1.5.5 2-2-1-2 1 .5-2L9 14h2l1-2Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M16 20v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1m7-9a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 9v-1a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7.5-4.6-9.3-9.1C1.5 7.8 3.6 4.5 7 4.5c2 0 3.3 1.1 5 3 1.7-1.9 3-3 5-3 3.4 0 5.5 3.3 4.3 6.4C19.5 15.4 12 20 12 20Z"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4zM8 4v16m8-16v16M4 8h4m8 0h4M4 12h16M4 16h4m8 0h4"/></symbol>
+    <symbol id="i-brush" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M18 3 9.5 11.5m0 0 3 3M9.5 11.5C7 11 5 13 5.5 15.5 6 18 3 19 3 19s4 3 7.5 0c2-1.7 2-4.5 2-4.5M18 3l3 3-8.5 8.5"/></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 5.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM6 21l3-5 3 2 1-6 3 3h3m-9-1 1-4-3 1-2 3"/></symbol>
+    <symbol id="i-ball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 7 4 3-1.5 4.5h-5L8 10l4-3Zm0 0V3m4 7 4.5-1.5m-6 6 2.5 4m-7.5-4L7 19m1-9-4.5-1.5"/></g></symbol>
+    <symbol id="i-shuttle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 16a3 3 0 1 0-4.2 4.2A3 3 0 0 0 8 16Zm0 0L20 4M8 16l3-9 9-3-3 9-9 3Zm3-9 6 6"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Zm8 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10.5 13.5 3 11l1.5-1.5 8 1L17 6a2 2 0 0 1 3 3l-4.5 4.5 1 8L15 23l-2.5-7.5L9 19v2.5L7.5 23 6 18l-5-1.5L2.5 15H5l3.5-3.5"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 8h12a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L14 14h-4l-1 1.6A4 4 0 0 1 2 13v-1a4 4 0 0 1 4-4Zm1 2.5v3m-1.5-1.5h3M16 11h.01M18 13h.01"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m15 5 4 4M4 20l1-5L16 4l4 4L9 19l-5 1Z"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 7v10M3 9v6m15-8v10m3-8v6M6 12h12"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 16H3v-4l2-5h14l2 5v4h-2M5 16a2 2 0 1 0 4 0m-4 0a2 2 0 1 1 4 0m0 0h6m0 0a2 2 0 1 0 4 0m-4 0a2 2 0 1 1 4 0M4 12h16"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Z"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- ============================== NAVBAR ============================== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Main">
+      <a href="#home" class="brand" aria-label="Back to top">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MEHTABUL</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#achievements">Awards</a></li>
+        <li><a href="#sports">Sports</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch colour theme">
+          <svg class="icon-sun"><use href="#i-sun"/></svg>
+          <svg class="icon-moon"><use href="#i-moon"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="home">
+      <div class="hero-band" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-photo reveal">
+          <div class="photo-frame">
+            <!-- EDIT: replace assets/images/profile.jpg with your portrait (recommended 800×1000, portrait) -->
+            <img src="assets/images/DP.jpg" alt="Portrait of Md Mehtabul Islam" width="800" height="1000" />
+          </div>
+          <span class="photo-badge"><svg><use href="#i-pin"/></svg>Dhaka, Bangladesh</span>
+        </div>
+
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hi, I'm Mehtab 👋</p>
+          <h1 class="hero-name">Md Mehtabul Islam</h1>
+          <p class="hero-role">
+            <span class="role-static">Undergraduate CSE Student<span class="role-sep"> &nbsp;·&nbsp;</span></span>
+            <span class="role-rotator" id="roleRotator" aria-live="polite">Aspiring Software Engineer</span>
+          </p>
+          <p class="hero-intro">
+            Studying Computer Science &amp; Engineering at <strong>BRAC University</strong>. I enjoy building things with
+            code, exploring machine learning, and bringing the same team spirit I learned on the football pitch to every project I join.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">See my work <svg><use href="#i-arrow"/></svg></a>
+            <!-- EDIT: replace assets/Md_Mehtabul_Islam_Resume.pdf whenever you update your CV -->
+            <a href="assets/Md_Mehtabul_Islam_Resume.pdf" class="btn btn-ghost" download>
+              <svg><use href="#i-download"/></svg> Download CV
+            </a>
+          </div>
+
+          <ul class="hero-social" aria-label="Contact links">
+            <li><a href="mailto:md.mehtabul.islam@g.bracu.ac.bd" aria-label="Email"><svg><use href="#i-mail"/></svg></a></li>
+            <li><a href="https://github.com/Mehtabul-Islam" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a></li>
+            <!-- EDIT: put your LinkedIn profile URL here, or delete this <li> -->
+            <li><a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="tel:+8801973640259" aria-label="Phone"><svg><use href="#i-phone"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quick stats strip -->
+      <div class="container">
+        <ul class="stats reveal">
+          <li><strong class="count" data-target="3.47" data-decimals="2">0</strong><span>Current CGPA</span></li>
+          <li><strong class="count" data-target="5.00" data-decimals="2">0</strong><span>GPA in SSC &amp; HSC</span></li>
+          <li><strong class="count" data-target="81" data-prefix="#">0</strong><span>HSC Board Merit </span></li>
+          <li><strong class="count" data-target="64.2" data-decimals="1" data-suffix=" km">0</strong><span>Longest virtual run</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">01</span>
+          <h2>About Me</h2>
+          <p>A quick look at who I am beyond the transcript.</p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-media reveal">
+            <!-- EDIT: replace assets/images/about.jpg with a casual / candid photo (recommended 900×1100) -->
+            <img src="assets/images/Winter.png" alt="Mehtab on campus" width="900" height="1100" loading="lazy" />
+          </div>
+
+          <div class="about-body reveal">
+            <p class="lead">
+              I'm Mehtab, 22, an undergraduate student at BRAC University studying Computer Science &amp; Engineering.
+              I'm working toward a career as a software engineer, with a growing focus on AI and machine learning.
+            </p>
+            <p>
+              Outside the classroom I've led clubs, captained a house football team, raised funds for flood relief and
+              run more than a marathon's distance. I like photography, design and travelling, and I bring a creative eye
+              and a competitor's discipline to whatever I'm building.
+            </p>
+
+            <div class="info-cards">
+              <div class="info-card">
+                <h3>Personal Details</h3>
+                <dl class="details">
+                  <div><dt>Date of Birth</dt><dd>6 May 2004</dd></div>
+                  <div><dt>Nationality</dt><dd>Bangladeshi</dd></div>
+                  <div><dt>Based in</dt><dd>Dhaka, Bangladesh</dd></div>
+                  <div><dt>Hometown</dt><dd>Mymensingh</dd></div>
+                </dl>
+              </div>
+
+              <div class="info-card">
+                <h3>Languages</h3>
+                <ul class="lang-list">
+                  <li><span>Bangla</span><em>Native</em><i style="--lvl:100%"></i></li>
+                  <li><span>English</span><em>Professional working</em><i style="--lvl:85%"></i></li>
+                  <li><span>Hindi</span><em>Conversational</em><i style="--lvl:55%"></i></li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 class="mini-title">Hobbies</h3>
+            <ul class="chips">
+              <li><svg><use href="#i-camera"/></svg>Photography</li>
+              <li><svg><use href="#i-plane"/></svg>Travelling</li>
+              <li><svg><use href="#i-pen"/></svg>Drawing</li>
+              <li><svg><use href="#i-dumbbell"/></svg>Fitness</li>
+              <li><svg><use href="#i-game"/></svg>Gaming</li>
+              <li><svg><use href="#i-shuttle"/></svg>Badminton</li>
+              <li><svg><use href="#i-ball"/></svg>Football</li>
+              <li><svg><use href="#i-brush"/></svg>Designing</li>
+            </ul>
+
+            <p class="license"><svg><use href="#i-car"/></svg> Holds a Non-Professional Motor Driving License</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EDUCATION ============================== -->
+    <section class="section section-tint" id="education">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">02</span>
+          <h2>Education</h2>
+          <p>A steady record from Mymensingh to Dhaka.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-date">2024 — Present</div>
+            <div class="tl-card">
+              <div class="tl-card-head">
+                <!-- EDIT: replace assets/images/logos/bracu.png with the BRAC University logo (square, ~200×200) -->
+                <img class="tl-logo" src="assets/images/logos/bracu.png" alt="BRAC University logo" width="200" height="200" loading="lazy" />
+                <div>
+                  <h3>B.Sc. in Computer Science &amp; Engineering</h3>
+                  <p class="tl-org">BRAC University, Dhaka</p>
+                </div>
+              </div>
+              <p class="tl-meta"><span class="pill">Current CGPA 3.47 / 4.00</span><span class="pill pill-soft">Undergraduate</span></p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-date">2022 — 2023</div>
+            <div class="tl-card">
+              <div class="tl-card-head">
+                <!-- EDIT: replace assets/images/logos/auc.png with the college logo -->
+                <img class="tl-logo" src="assets/images/logos/auc.png" alt="Agricultural University College logo" width="200" height="200" loading="lazy" />
+                <div>
+                  <h3>Higher Secondary Certificate (HSC)</h3>
+                  <p class="tl-org">Agricultural University College, Mymensingh</p>
+                </div>
+              </div>
+              <p class="tl-meta"><span class="pill">GPA 5.00 / 5.00</span><span class="pill pill-gold">Board Merit: 81</span></p>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-date">2019 — 2021</div>
+            <div class="tl-card">
+              <div class="tl-card-head">
+                <!-- EDIT: replace assets/images/logos/auhs.png with the school logo -->
+                <img class="tl-logo" src="assets/images/logos/auhs.png" alt="Agriculture University High School logo" width="200" height="200" loading="lazy" />
+                <div>
+                  <h3>Secondary School Certificate (SSC)</h3>
+                  <p class="tl-org">Agriculture University High School, Mymensingh</p>
+                </div>
+              </div>
+              <p class="tl-meta"><span class="pill">GPA 5.00 / 5.00</span></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">03</span>
+          <h2>Skills</h2>
+          <p>The technical toolkit, and the people skills that make it work.</p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-icon"><svg><use href="#i-code"/></svg></span>
+            <h3>Programming</h3>
+            <ul class="tags"><li>Java</li><li>Python</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-icon"><svg><use href="#i-layers"/></svg></span>
+            <h3>Core CS</h3>
+            <ul class="tags"><li>Object-Oriented Programming</li><li>Data Structures</li><li>Algorithms</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-icon"><svg><use href="#i-brain"/></svg></span>
+            <h3>AI / ML</h3>
+            <ul class="tags"><li>Machine Learning</li><li>Data Preprocessing</li><li>Exploratory Data Analysis</li><li>Pandas</li><li>Scikit-learn</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-icon"><svg><use href="#i-tool"/></svg></span>
+            <h3>Tools &amp; Web</h3>
+            <ul class="tags"><li>Git</li><li>GitHub</li><li>Google Colab</li><li>VS Code</li><li>HTML</li><li>CSS</li></ul>
+          </article>
+        </div>
+
+        <div class="expertise reveal">
+          <h3>Beyond code</h3>
+          <ul class="expertise-list">
+            <li>Leadership</li><li>Management</li><li>Teamwork</li><li>Planning</li>
+            <li>Critical Thinking</li><li>Negotiation</li><li>Graphic Design</li><li>Photography</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section section-tint" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">04</span>
+          <h2>Projects</h2>
+          <p>From data pipelines to breadboards.</p>
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-media">
+              <!-- EDIT: replace with a screenshot of your notebook / results (recommended 1200×750) -->
+              <img src="assets/images/projects/mushroom.jpg" alt="Mushroom classification project screenshot" width="1200" height="750" loading="lazy" />
+              <span class="project-tag">Machine Learning</span>
+            </div>
+            <div class="project-body">
+              <h3>Mushroom Classification using Machine Learning</h3>
+              <ul class="tags tags-sm"><li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>KNN</li><li>Decision Trees</li></ul>
+              <ul class="project-points">
+                <li>Built a classification pipeline on a mushroom dataset with both categorical and numerical features.</li>
+                <li>Handled missing values, encoded categories, scaled features and explored the data visually.</li>
+                <li>Trained and evaluated KNN and decision-tree models and compared them with suitable metrics.</li>
+              </ul>
+              <div class="project-links">
+                <!-- EDIT: point these to your real repo / notebook links -->
+                <a href="https://github.com/Mehtabul-Islam" target="_blank" rel="noopener" class="link"><svg><use href="#i-github"/></svg> Code</a>
+                <a href="#" class="link link-muted"><svg><use href="#i-arrow"/></svg> Notebook</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <!-- EDIT: replace with a photo of your breadboard circuit (recommended 1200×750) -->
+              <img src="assets/images/projects/gray .jpg" alt="4-bit binary to Gray code converter circuit" width="1200" height="750" loading="lazy" />
+              <span class="project-tag">Digital Logic</span>
+            </div>
+            <div class="project-body">
+              <h3>4-bit Binary to Gray Code Converter with Parity Detection</h3>
+              <ul class="tags tags-sm"><li>Digital Logic</li><li>Combinational Circuits</li><li>Logic Gates</li></ul>
+              <ul class="project-points">
+                <li>Designed a circuit that converts a 4-bit binary input into Gray code.</li>
+                <li>Added parity-based error detection using logic gates and LED indicators.</li>
+                <li>Built and tested the full circuit on a breadboard.</li>
+              </ul>
+              <div class="project-links">
+                <!-- EDIT: link to a demo video or report, or remove -->
+                <a href="#" class="link link-muted"><svg><use href="#i-arrow"/></svg> Demo video</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TEMPLATE: copy this block to add a new project -->
+          <article class="project-card project-card-empty reveal">
+            <div class="project-body">
+              <span class="skill-icon"><svg><use href="#i-code"/></svg></span>
+              <h3>Next project coming soon</h3>
+              <p>Always building something new. Check my GitHub for the latest work in progress.</p>
+              <a href="https://github.com/Mehtabul-Islam" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><svg><use href="#i-github"/></svg> Visit GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== LEADERSHIP ============================== -->
+    <section class="section" id="leadership">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">05</span>
+          <h2>Leadership &amp; Clubs</h2>
+          <p>Leading teams since school, from debate stages to house football.</p>
+        </header>
+
+        <div class="lead-grid">
+          <article class="lead-card reveal">
+            <!-- EDIT: replace with a club event photo (recommended 900×600) -->
+            <img src="assets/images/leadership/bizbee.jpg" alt="BRAC University Business Club event" width="900" height="600" loading="lazy" />
+            <div class="lead-body">
+              <span class="lead-date">2024 — Present</span>
+              <h3>Assistant Director</h3>
+              <p class="lead-org">BRAC University Business Club (BIZ BEE)</p>
+              <p>Department of Information Technology, BRAC University, Dhaka.</p>
+            </div>
+          </article>
+
+          <article class="lead-card reveal">
+            <img src="assets/images/leadership/kushiara-house.jpg" alt="Kushiara House, BRAC University residential semester" width="900" height="600" loading="lazy" />
+            <div class="lead-body">
+              <span class="lead-date">2025</span>
+              <h3>House Representative &amp; Football Captain</h3>
+              <p class="lead-org">Kushiara House, BRAC University Residential Semester</p>
+              <p>Represented the house and captained the Kushiara House football team.</p>
+            </div>
+          </article>
+
+          <article class="lead-card reveal">
+            <img src="assets/images/leadership/debate-club.png" alt="Agriculture University High School Debating Club" width="900" height="600" loading="lazy" />
+            <div class="lead-body">
+              <span class="lead-date">2020 — 2021</span>
+              <h3>President</h3>
+              <p class="lead-org">Agriculture University High School Debating Club (AUHSDC)</p>
+              <p>Agriculture University High School, Mymensingh.</p>
+            </div>
+          </article>
+
+          <article class="lead-card reveal">
+            <img src="assets/images/leadership/science-club.jpg" alt="Agriculture University High School Science Club" width="900" height="600" loading="lazy" />
+            <div class="lead-body">
+              <span class="lead-date">2020 — 2021</span>
+              <h3>Vice-President</h3>
+              <p class="lead-org">Agriculture University High School Science Club (AUHSSC)</p>
+              <p>Agriculture University High School, Mymensingh.</p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="callout reveal">
+          <span class="callout-icon"><svg><use href="#i-heart"/></svg></span>
+          <div>
+            <h3>Flood Relief in Bangladesh <small>2024</small></h3>
+            <p>Worked as a fundraiser for flood relief efforts in Bangladesh.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================== ACHIEVEMENTS ============================== -->
+    <section class="section section-tint" id="achievements">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">06</span>
+          <h2>Achievements &amp; Awards</h2>
+          <p>Olympiads, stages, canvases and a film set.</p>
+        </header>
+
+        <div class="award-grid">
+          <article class="award reveal">
+            <span class="award-icon gold"><svg><use href="#i-medal"/></svg></span>
+            <span class="award-year">2022</span>
+            <h3>Bangladesh Biology Olympiad</h3>
+            <p><strong>1st Runner-Up</strong>, Divisional Round, Mymensingh</p>
+          </article>
+          <article class="award reveal">
+            <span class="award-icon"><svg><use href="#i-globe"/></svg></span>
+            <span class="award-year">2019</span>
+            <h3>English Olympiad</h3>
+            <p><strong>Selected for Nationals</strong></p>
+          </article>
+          <article class="award reveal">
+            <span class="award-icon"><svg><use href="#i-users"/></svg></span>
+            <span class="award-year">2019</span>
+            <h3>Debate Champion &amp; 1st Speaker</h3>
+            <p>Group C, Annual Cultural Competition, AUHS</p>
+          </article>
+          <article class="award reveal">
+            <span class="award-icon"><svg><use href="#i-brain"/></svg></span>
+            <span class="award-year">2019</span>
+            <h3>1st Place, Science Project</h3>
+            <p>Group B, Annual Cultural Competition, AUHS</p>
+          </article>
+          <article class="award reveal">
+            <span class="award-icon"><svg><use href="#i-medal"/></svg></span>
+            <span class="award-year">2016 — 2019</span>
+            <h3>Al Quran Surah Recitation</h3>
+            <p>Awarded 3+ times, Annual Cultural Competition, AUHS</p>
+          </article>
+          <article class="award reveal">
+            <span class="award-icon"><svg><use href="#i-brush"/></svg></span>
+            <span class="award-year">2015 — 2018</span>
+            <h3>Art Competitions</h3>
+            <p><strong>2nd Position</strong>, National Children Award Competition · 5+ local art acknowledgements</p>
+          </article>
+          <article class="award reveal">
+            <span class="award-icon"><svg><use href="#i-film"/></svg></span>
+            <span class="award-year">2016 — 2019</span>
+            <h3>Acting, Firefly Film House</h3>
+            <p>Starred in the short film <em>Wave the Flag</em></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SPORTS ============================== -->
+    <section class="section" id="sports">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">07</span>
+          <h2>Sports &amp; Endurance</h2>
+          <p>Football, badminton and long-distance running.</p>
+        </header>
+
+        <div class="sports-grid">
+          <article class="sport-card reveal">
+            <div class="sport-media">
+              <!-- EDIT: replace with your football photo (recommended 900×650) -->
+              <img src="assets/images/sports/football.jpg" alt="Mehtab playing football" width="900" height="650" loading="lazy" />
+              <span class="sport-badge"><svg><use href="#i-ball"/></svg> Football</span>
+            </div>
+            <ul class="sport-list">
+              <li><b>2025</b> Captain, Kushiara House Football Team, BRACU Residential Semester</li>
+              <li><b>2023</b> Selected for Divisional as Right Back &amp; Vice-Captain, Inter College Sports (AUC)</li>
+              <li><b>2018–24</b> BAU Residential Football Club: Left Forward (2018–22), Right Back (2023–24)</li>
+              <li><b>2020</b> Class Team Player, Intra-School Sports (AUHS)</li>
+            </ul>
+          </article>
+
+          <article class="sport-card reveal">
+            <div class="sport-media">
+              <!-- EDIT: replace with your badminton photo -->
+              <img src="assets/images/sports/badminton.jpg" alt="Mehtab playing badminton" width="900" height="650" loading="lazy" />
+              <span class="sport-badge"><svg><use href="#i-shuttle"/></svg> Badminton</span>
+            </div>
+            <ul class="sport-list">
+              <li><b>2023</b> Selected for Divisional, Singles &amp; Doubles (AUC)</li>
+              <li><b>2023</b> College Champion, Singles &amp; Doubles (AUC Intra)</li>
+              <li><b>2020</b> School Champion, Doubles (AUHS)</li>
+              <li><b>2020</b> Also played cricket for the class team</li>
+            </ul>
+          </article>
+
+          <article class="sport-card sport-card-wide reveal">
+            <div class="sport-media">
+              <!-- EDIT: replace with a marathon / finish-line photo -->
+              <img src="assets/images/sports/Marathon.jpg" alt="Mehtab running a marathon" width="900" height="650" loading="lazy" />
+              <span class="sport-badge"><svg><use href="#i-run"/></svg> Marathon · 2024–25</span>
+            </div>
+            <div class="run-stats">
+              <p class="run-intro">Distances completed in 2024–2025:</p>
+              <ul class="run-bars">
+                <li><span>Virtual Run (Conqueror)</span><i style="--w:100%"></i><b>64.2 km</b></li>
+                <li><span>Virtual Run (Conqueror)</span><i style="--w:82%"></i><b>52.7 km</b></li>
+                <li><span>Virtual Run (Conqueror)</span><i style="--w:66%"></i><b>42.2 km</b></li>
+                <li><span>Half Marathon</span><i style="--w:33%"></i><b>21 km</b></li>
+                <li><span>Marathon</span><i style="--w:16%"></i><b>10 km</b></li>
+                <li><span>Marathon</span><i style="--w:12%"></i><b>7.5 km</b></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== GALLERY ============================== -->
+    <section class="section section-tint" id="gallery">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-num">08</span>
+          <h2>Gallery</h2>
+          <p>Moments from behind the lens, on the field and on the road. Tap a photo to enlarge.</p>
+        </header>
+
+        <!-- EDIT: replace gallery-01.jpg ... gallery-08.jpg in assets/images/gallery/.
+             Change the alt text and the data-caption to describe each photo.
+             Add "tall" or "wide" class on a <figure> to change its shape. -->
+        <div class="gallery" id="gallery-grid">
+          <figure class="g-item tall"><img src="assets/images/gallery/GRobe.jpg" alt="Gallery photo 1" data-caption="Harry Potter Day" loading="lazy" /></figure>
+          <figure class="g-item"><img src="assets/images/gallery/gallery-02.jpg" alt="Gallery photo 2" data-caption="Travel: caption here" loading="lazy" /></figure>
+          <figure class="g-item wide"><img src="assets/images/gallery/gallery-03.jpg" alt="Gallery photo 3" data-caption="Football: caption here" loading="lazy" /></figure>
+          <figure class="g-item"><img src="assets/images/gallery/gallery-04.jpg" alt="Gallery photo 4" data-caption="Campus life: caption here" loading="lazy" /></figure>
+          <figure class="g-item"><img src="assets/images/gallery/gallery-05.jpg" alt="Gallery photo 5" data-caption="Badminton: caption here" loading="lazy" /></figure>
+          <figure class="g-item tall"><img src="assets/images/gallery/gallery-06.jpg" alt="Gallery photo 6" data-caption="Drawing / design: caption here" loading="lazy" /></figure>
+          <figure class="g-item wide"><img src="assets/images/gallery/gallery-07.jpg" alt="Gallery photo 7" data-caption="Marathon: caption here" loading="lazy" /></figure>
+          <figure class="g-item"><img src="assets/images/gallery/gallery-08.jpg" alt="Gallery photo 8" data-caption="Club event: caption here" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-wrap reveal">
+          <div class="contact-info">
+            <span class="section-num">09</span>
+            <h2>Let's connect</h2>
+            <p>Open to internships, collaborations and a good conversation about tech, football or photography.</p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="c-icon"><svg><use href="#i-mail"/></svg></span>
+                <div><small>Email</small><a href="mailto:md.mehtabul.islam@g.bracu.ac.bd">md.mehtabul.islam@g.bracu.ac.bd</a></div>
+              </li>
+              <li>
+                <span class="c-icon"><svg><use href="#i-phone"/></svg></span>
+                <div><small>Phone</small><a href="tel:+8801973640259">+880 1973-640259</a></div>
+              </li>
+              <li>
+                <span class="c-icon"><svg><use href="#i-github"/></svg></span>
+                <div><small>GitHub</small><a href="https://github.com/Mehtabul-Islam" target="_blank" rel="noopener">github.com/Mehtabul-Islam</a></div>
+              </li>
+              <li>
+                <span class="c-icon"><svg><use href="#i-pin"/></svg></span>
+                <div><small>Location</small><span>Dhaka, Bangladesh</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Static-site friendly form: opens the visitor's email app with the message filled in. -->
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="cName">Your name</label>
+              <input id="cName" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="cEmail">Your email</label>
+              <input id="cEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="cMsg">Message</label>
+              <textarea id="cMsg" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send message <svg><use href="#i-arrow"/></svg></button>
+            <p class="form-note" id="formNote" role="status">This opens your email app with the message ready to send.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Md Mehtabul Islam. Built with HTML, CSS &amp; JavaScript.</p>
+      <ul class="footer-social">
+        <li><a href="mailto:md.mehtabul.islam@g.bracu.ac.bd" aria-label="Email"><svg><use href="#i-mail"/></svg></a></li>
+        <li><a href="https://github.com/Mehtabul-Islam" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+
+  <!-- Lightbox for gallery -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-btn lb-close" type="button" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><svg><use href="#i-left"/></svg></button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo"><svg><use href="#i-right"/></svg></button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
